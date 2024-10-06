@@ -146,8 +146,6 @@ def get_db():
 
 def is_mapping(query: str):
     for mapping in mappings:
-        print(query)
-        print(mapping["name"])
         if query.startswith(mapping["name"]):
             return mapping
     return False
@@ -159,12 +157,10 @@ async def root(body: QueryInfo):
     if mapping:
         format = mapping["format"]
         spec = submit_mapping_request(q.replace(mapping['name'], ""), format)
-        print(spec)
         output = mapping["fn"](spec)()
         return output
 
     info = body.info
-    print(f"info: {info} - {q}")
     if info:
         update_info(q)
         return {}
@@ -191,10 +187,7 @@ class AskInfo(BaseModel):
 def ask(body: AskInfo):
     prompt = body.prompt
     db = get_db()
-    print(current)
-    print(db)
     output = submit_ask_request(prompt, db)
-    print(output)
     return { "message": output }
 
 
