@@ -1,0 +1,65 @@
+{
+  "StoreType": [
+    "basic",
+    "furnished",
+    "italian"
+  ],
+  "Store": {
+    "name": "string",
+    "type": "StoreType"
+  },
+  "Ingredient": {
+    "name": "string",
+    "type": "StoreType"
+  },
+  "Recipe": {
+    "name": "string",
+    "difficulty": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "messiness": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "ingredients": [
+      "string"
+    ]
+  },
+  "State": {
+    "stores": [
+      "Store"
+    ],
+    "ingredients": [
+      "Ingredient"
+    ],
+    "recipes": [
+      "Recipe"
+    ],
+    "days": {
+      "monday": [
+        "Recipe"
+      ],
+      "tuesday": [
+        "Recipe"
+      ],
+      "wednesday": [
+        "Recipe"
+      ],
+      "thursday": [
+        "Recipe"
+      ],
+      "friday": [
+        "Recipe"
+      ],
+      "saturday": [
+        "Recipe"
+      ],
+      "sunday": [
+        "Recipe"
+      ]
+    }
+  }
+}

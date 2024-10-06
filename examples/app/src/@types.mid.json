@@ -1,0 +1,72 @@
+{
+  "UUID": "string",
+  "Email": "string",
+  "PhoneNumber": "string",
+  "Date": "string",
+  "Subject": {
+    "MATH": "\"MATH\"",
+    "SCIENCE": "\"SCIENCE\"",
+    "ENGLISH": "\"ENGLISH\"",
+    "HISTORY": "\"HISTORY\"",
+    "ART": "\"ART\"",
+    "MUSIC": "\"MUSIC\"",
+    "PHYSICAL_EDUCATION": "\"PHYSICAL_EDUCATION\""
+  },
+  "Grade": {
+    "FRESHMAN": "\"FRESHMAN\"",
+    "SOPHOMORE": "\"SOPHOMORE\"",
+    "JUNIOR": "\"JUNIOR\"",
+    "SENIOR": "\"SENIOR\""
+  },
+  "Person": {
+    "id": "number",
+    "firstName": "string",
+    "lastName": "string",
+    "email": "Email",
+    "phoneNumber": "PhoneNumber",
+    "dateOfBirth": "Date"
+  },
+  "Teacher": {
+    "subjects": [
+      "Subject"
+    ],
+    "hireDate": "Date",
+    "classesTeaching": [
+      "UUID"
+    ]
+  },
+  "Student": {
+    "grade": "Grade",
+    "enrollmentDate": "Date",
+    "classesAttending": [
+      "UUID"
+    ]
+  },
+  "Class": {
+    "id": "UUID",
+    "name": "string",
+    "subject": "Subject",
+    "teacherId": "UUID",
+    "studentIds": [
+      "UUID"
+    ],
+    "schedule": "ClassSchedule"
+  },
+  "ClassSchedule": {
+    "dayOfWeek": "string",
+    "startTime": "string",
+    "endTime": "string",
+    "roomNumber": "string"
+  },
+  "SchoolDatabase": {
+    "teachers": [
+      "Teacher"
+    ],
+    "students": [
+      "Student"
+    ],
+    "classes": [
+      "Class"
+    ]
+  }
+}

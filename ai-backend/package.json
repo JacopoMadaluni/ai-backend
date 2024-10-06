@@ -1,0 +1,20 @@
+{
+	"name": "ai-backend",
+	"version": "0.0.7",
+	"description": "Frontend SDK for AI backend",
+	"main": "dist/index.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"prepublishOnly": "rm -rf ./dist && npm run build",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Jacopo Madaluni",
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"typescript": "^5.6.2"
+	}
+}
